@@ -10,3 +10,10 @@ The plugin adds:
   - Tools/Remove All Nyan Cats
 - 1 new widget
   - The nyan cat which summons a nyan cat when clicked
+
+## Installation
+- Download the latest release
+- Open the plugin settings in your JetBrains IDE
+- Click the wheel icon
+- Click "Install plugin from disk"
+- Select the downloaded jar file with the file chooser
