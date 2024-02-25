@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>su.mandora.nyancatscreensaver</id>
+    <name>Nyan Cat Screensaver</name>
+    <vendor>Sumandora</vendor>
+
+    <!-- If it works, it works; This makes uploading the plugin to the marketplace impossible, but I don't care -->
+    <idea-version since-build="0"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory id="NyanCatWidgetFactory"
+                                implementation="su.mandora.nyancatscreensaver.NyanCatWidgetFactory"/>
+    </extensions>
+    <actions>
+        <action id="su.mandora.nyancatscreensaver.SummonNewNyanCatAction"
+                class="su.mandora.nyancatscreensaver.SummonNewNyanCatAction"
+                text="Summon New Nyan Cat"
+                description="Summons new nyan cat to the current editor">
+            <add-to-group group-id="ToolsMenu"/>
+        </action>
+        <action id="su.mandora.nyancatscreensaver.RemoveAllNyanCatsAction"
+                class="su.mandora.nyancatscreensaver.RemoveAllNyanCatsAction"
+                text="Remove All Nyan Cats"
+                description="Removes all nyan cats in all editors">
+            <add-to-group group-id="ToolsMenu"/>
+        </action>
+    </actions>
+</idea-plugin>
