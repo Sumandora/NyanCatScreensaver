@@ -1,0 +1,21 @@
+name: Java CI with Gradle
+
+on: [ "push", "pull_request" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-java@v3
+        name: Set up JDK 17
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Build the project
+        run: ./gradlew buildPlugin
